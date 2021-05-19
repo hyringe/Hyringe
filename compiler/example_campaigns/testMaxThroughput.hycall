@@ -1,0 +1,5 @@
+proc main() {
+    for (i : range(0, 10))
+        for (j : range(0, 10000000))
+            hcall(["name" -> "HvSignalEvent", "ConnectionId" -> 0xabcd, "FlagNumber" -> 0xb0]);
+}

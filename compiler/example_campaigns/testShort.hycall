@@ -1,0 +1,10 @@
+HV_FLUSH_ALL_PROCESSORS = 0b1;
+HV_FLUSH_ALL_VIRTUAL_ADDRESS_SPACES = 0b10;
+
+proc main() {
+    hcall(["name" -> "HvFlushVirtualAddressSpace", "AddressSpace" -> 0, "Flags" -> HV_FLUSH_ALL_VIRTUAL_ADDRESS_SPACES + HV_FLUSH_ALL_PROCESSORS, "ProcessorMask" -> 0]);
+    delay(1000);
+    hcall(["name" -> "HvSignalEvent", "ConnectionId" -> 0x1234, "FlagNumber" -> 0xb0]);
+    delay(50);
+    hcall(["name" -> "HvSignalEvent", "ConnectionId" -> 0xabcd, "FlagNumber" -> 0xb0]);
+}

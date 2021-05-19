@@ -1,0 +1,3 @@
+proc main() {
+    hcall(["name" -> "HvDeleteVp", "PartitionId" -> 5, "VpIndex" -> 6]);
+}

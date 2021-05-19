@@ -1,0 +1,8 @@
+proc main() {
+    for (j : range(0, 1)) {
+        for (i : range(0, 20000)) {
+            hcall(["name" -> "HvSignalEvent", "ConnectionId" -> 0x3257, "FlagNumber" -> 0xf]);
+            delay(800);
+        }
+    }
+}

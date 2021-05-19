@@ -1,0 +1,3 @@
+proc main() {
+    hcall(["name" -> "HvCreatePort", "PortPartition" -> -1, "PortId" -> 2547, "ConnectionPartition" -> -1]);
+}

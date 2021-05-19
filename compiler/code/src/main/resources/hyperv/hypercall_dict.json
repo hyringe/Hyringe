@@ -1,0 +1,1066 @@
+{
+    "InvalidHypercallNoInput" : {
+	"call_code" : 256,
+	"fast" : false,
+	"rep" : false,
+	"params" : {},
+	"output" : {}
+    },
+	"AnotherInvalidHypercallNoInput" : {
+		"call_code" : 257,
+		"fast" : false,
+		"rep" : false,
+		"params" : {},
+		"output" : {}
+	},
+    "InvalidHypercall8Input" : {
+	"call_code" : 256,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "param1" : {
+		"offset" : 0,
+		"size" : 8
+	    }
+	},
+	"output" : {}
+    },
+	"AnotherInvalidHypercall8Input" : {
+		"call_code" : 257,
+		"fast" : false,
+		"rep" : false,
+		"params" : {
+			"param1" : {
+				"offset" : 0,
+				"size" : 8
+			}
+		},
+		"output" : {}
+	},
+    "InvalidHypercall32Input" : {
+	"call_code" : 256,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "param1" : {
+		"offset" : 0,
+		"size" : 32
+	    }
+	},
+	"output" : {}
+    },
+    "InvalidHypercall256Input" : {
+	"call_code" : 256,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "param1" : {
+		"offset" : 0,
+		"size" : 256
+	    }
+	},
+	"output" : {}
+    },
+    "HvExtCallQueryCapabilities" : {
+	"call_code" : 32769,
+	"fast" : false,
+	"rep" : false,
+	"params" : {},
+	"output" : {
+	    "Capabilities" : {
+		"offset" : 0,
+		"size" : 8
+	    }
+	}
+    },
+    "HvStartVirtualProcessor" : {
+	"call_code" : 153,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "PartitionId" : {
+		"offset" : 0,
+		"size" : 8
+	    },
+	    "VpIndex" : {
+		"offset" : 8,
+		"size" : 4
+	    },
+	    "TargetVtl" : {
+		"offset" : 12,
+		"size" : 1
+	    },
+	    "Rip" : {
+		"offset" : 16,
+		"size" : 8
+	    },
+	    "Rsp" : {
+		"offset" : 24,
+		"size" : 8
+	    },
+	    "Rflags" : {
+		"offset" : 32,
+		"size" : 8
+	    },
+	    "Cs[0]" : {
+		"offset" : 40,
+		"size" : 8
+	    },
+	    "Cs[1]" : {
+		"offset" : 48,
+		"size" : 8
+	    },
+	    "Ds[0]" : {
+		"offset" : 56,
+		"size" : 8
+	    },
+	    "Ds[1]" : {
+		"offset" : 64,
+		"size" : 8
+	    },
+	    "Es[0]" : {
+		"offset" : 72,
+		"size" : 8
+	    },
+	    "Es[1]" : {
+		"offset" : 80,
+		"size" : 8
+	    },
+	    "Fs[0]" : {
+		"offset" : 88,
+		"size" : 8
+	    },
+	    "Fs[1]" : {
+		"offset" : 96,
+		"size" : 8
+	    },
+	    "Gs[0]" : {
+		"offset" : 104,
+		"size" : 8
+	    },
+	    "Gs[1]" : {
+		"offset" : 112,
+		"size" : 8
+	    },
+	    "Ss[0]" : {
+		"offset" : 120,
+		"size" : 8
+	    },
+	    "Ss[1]" : {
+		"offset" : 128,
+		"size" : 8
+	    },
+	    "Ts[0]" : {
+		"offset" : 136,
+		"size" : 8
+	    },
+	    "Ts[1]" : {
+		"offset" : 144,
+		"size" : 8
+	    },
+	    "Ltdr[0]" : {
+		"offset" : 152,
+		"size" : 8
+	    },
+	    "Ltdr[1]" : {
+		"offset" : 160,
+		"size" : 8
+	    },
+	    "ltdr[0]" : {
+		"offset" : 168,
+		"size" : 8
+	    },
+	    "ltdr[1]" : {
+		"offset" : 176,
+		"size" : 8
+	    },
+	    "Gtdr[0]" : {
+		"offset" : 184,
+		"size" : 8
+	    },
+	    "Gtdr[1]" : {
+		"offset" : 192,
+		"size" : 8
+	    },
+	    "Efer" : {
+		"offset" : 200,
+		"size" : 8
+	    },
+	    "Cr0" : {
+		"offset" : 208,
+		"size" : 8
+	    },
+	    "Cr3" : {
+		"offset" : 216,
+		"size" : 8
+	    },
+	    "Cr4" : {
+		"offset" : 224,
+		"size" : 8
+	    },
+	    "MsrCrPat" : {
+		"offset" : 232,
+		"size" : 8
+	    }
+	},
+	"output" : {}
+    },
+    "HvSwitchVirtualAddressSpace" : {
+	"call_code" : 1,
+	"fast" : true,
+	"rep" : false,
+	"params" : {
+	    "AddressSpace" : {
+		"offset" : 0,
+		"size" : 8
+	    }
+	},
+	"output" : {}
+    },
+    "HvFlushVirtualAddressSpace" : {
+	"call_code" : 2,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "AddressSpace" : {
+		"offset" : 0,
+		"size" : 8
+	    },
+	    "Flags" : {
+		"offset" : 8,
+		"size" : 8
+	    },
+	    "ProcessorMask" : {
+		"offset" : 16,
+		"size" : 8
+	    }
+	},
+	"output" : {}
+    },
+    "HvFlushVirtualAddressSpaceEx" : {
+	"call_code" : 19,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "AddressSpace" : {
+		"offset" : 0,
+		"size" : 8
+	    },
+	    "Flags" : {
+		"offset" : 8,
+		"size" : 8
+	    },
+	    "ProcessorSet" : {
+		"offset" : 16,
+		"size" : "variable"
+	    }
+	},
+	"output" : {}
+    },
+    "HvTranslateVirtualAddress" : {
+	"call_code" : 82,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "PartitionId" : {
+		"offset" : 0,
+		"size" : 8
+	    },
+	    "VpIndex" : {
+		"offset" : 8,
+		"size" : 4
+	    },
+	    "ControlFlags" : {
+		"offset" : 16,
+		"size" : 8
+	    },
+	    "GvaPage" : {
+		"offset" : 24,
+		"size" : 8
+	    }
+	},
+	"output" : {
+	    "TranslationResult" : {
+		"offset" : 0,
+		"size" : 8
+	    },
+	    "GpaPage" : {
+		"offset" : 8,
+		"size" : 8
+	    }
+	}
+    },
+    "HvExtCallGetBootZeroedMemory" : {
+	"call_code" : 32770,
+	"fast" : false,
+	"rep" : false,
+	"params" : {},
+	"output" : {
+	    "StartGpa" : {
+		"offset" : 0,
+		"size" : 8
+	    },
+	    "PageCount" : {
+		"offset" : 8,
+		"size" : 8
+	    }
+	}
+    },
+    "HvAssertVirtualInterrupt" : {
+	"call_code" : 148,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "DestinationPartition" : {
+		"offset" : 0,
+		"size" : 8
+	    },
+	    "InterruptControl" : {
+		"offset" : 8,
+		"size" : 8
+	    },
+	    "DestinationAddress" : {
+		"offset" : 16,
+		"size" : 8
+	    },
+	    "RequestedVector" : {
+		"offset" : 24,
+		"size" : 4
+	    },
+	    "TargetVtl" : {
+		"offset" : 28,
+		"size" : 1
+	    }
+	},
+	"output" : {}
+    },
+    "HvSendSyntheticClusterIpi" : {
+	"call_code" : 11,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "Vector" : {
+		"offset" : 0,
+		"size" : 4
+	    },
+	    "TargetVtl" : {
+		"offset" : 4,
+		"size" : 1
+	    },
+	    "ProcessorMask" : {
+		"offset" : 8,
+		"size" : 8
+	    }
+	},
+	"output" : {}
+    },
+    "HvSendSyntheticClusterIpiEx" : {
+	"call_code" : 21,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "Vector" : {
+		"offset" : 0,
+		"size" : 4
+	    },
+	    "TargetVtl" : {
+		"offset" : 4,
+		"size" : 1
+	    },
+	    "ProcessorSet" : {
+		"offset" : 8,
+		"size" : "variable"
+	    }
+	},
+	"output" : {}
+    },
+    "HvRetargetDeviceInterrupt" : {
+	"call_code" : 126,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "PartitionId" : {
+		"offset" : 0,
+		"size" : 8
+	    },
+	    "DeviceId" : {
+		"offset" : 8,
+		"size" : 8
+	    },
+	    "InterruptEntry" : {
+		"offset" : 16,
+		"size" : 16
+	    },
+	    "InterruptTarget" : {
+		"offset" : 72,
+		"size" : 16
+	    }
+	},
+	"output" : {}
+    },
+    "HvPostMessage" : {
+	"call_code" : 92,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "ConnectionId" : {
+		"offset" : 0,
+		"size" : 4
+	    },
+	    "MessageType" : {
+		"offset" : 8,
+		"size" : 4
+	    },
+	    "PayloadSize" : {
+		"offset" : 12,
+		"size" : 4
+	    },
+	    "Message[0]" : {
+		"offset" : 16,
+		"size" : 8
+	    },
+	    "Message[1]" : {
+		"offset" : 24,
+		"size" : 8
+	    },
+	    "Message[2]" : {
+		"offset" : 32,
+		"size" : 8
+	    },
+	    "Message[3]" : {
+		"offset" : 40,
+		"size" : 8
+	    },
+	    "Message[4]" : {
+		"offset" : 48,
+		"size" : 8
+	    },
+	    "Message[5]" : {
+		"offset" : 56,
+		"size" : 8
+	    },
+	    "Message[6]" : {
+		"offset" : 64,
+		"size" : 8
+	    },
+	    "Message[7]" : {
+		"offset" : 72,
+		"size" : 8
+	    },
+	    "Message[8]" : {
+		"offset" : 80,
+		"size" : 8
+	    },
+	    "Message[9]" : {
+		"offset" : 88,
+		"size" : 8
+	    },
+	    "Message[10]" : {
+		"offset" : 96,
+		"size" : 8
+	    },
+	    "Message[11]" : {
+		"offset" : 104,
+		"size" : 8
+	    },
+	    "Message[12]" : {
+		"offset" : 112,
+		"size" : 8
+	    },
+	    "Message[13]" : {
+		"offset" : 120,
+		"size" : 8
+	    },
+	    "Message[14]" : {
+		"offset" : 128,
+		"size" : 8
+	    },
+	    "Message[15]" : {
+		"offset" : 136,
+		"size" : 8
+	    },
+	    "Message[16]" : {
+		"offset" : 144,
+		"size" : 8
+	    },
+	    "Message[17]" : {
+		"offset" : 152,
+		"size" : 8
+	    },
+	    "Message[18]" : {
+		"offset" : 160,
+		"size" : 8
+	    },
+	    "Message[19]" : {
+		"offset" : 168,
+		"size" : 8
+	    },
+	    "Message[20]" : {
+		"offset" : 176,
+		"size" : 8
+	    },
+	    "Message[21]" : {
+		"offset" : 184,
+		"size" : 8
+	    },
+	    "Message[22]" : {
+		"offset" : 192,
+		"size" : 8
+	    },
+	    "Message[23]" : {
+		"offset" : 200,
+		"size" : 8
+	    },
+	    "Message[24]" : {
+		"offset" : 208,
+		"size" : 8
+	    },
+	    "Message[25]" : {
+		"offset" : 216,
+		"size" : 8
+	    },
+	    "Message[26]" : {
+		"offset" : 224,
+		"size" : 8
+	    },
+	    "Message[27]" : {
+		"offset" : 232,
+		"size" : 8
+	    },
+	    "Message[28]" : {
+		"offset" : 240,
+		"size" : 8
+	    },
+	    "Message[29]" : {
+		"offset" : 248,
+		"size" : 8
+	    }
+	},
+	"output" : {}
+    },
+    "HvSignalEvent" : {
+	"call_code" : 93,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "ConnectionId" : {
+		"offset" : 0,
+		"size" : 4
+	    },
+	    "FlagNumber" : {
+		"offset" : 4,
+		"size" : 2
+	    },
+		"ReservedZ" : {
+		"offset" : 6,
+		"size" : 2
+		}
+	},
+	"output" : {}
+    },
+    "HvNotifyLongSpinWait" : {
+	"call_code" : 8,
+	"fast" : true,
+	"rep" : false,
+	"params" : {
+	    "SpinwaitInfo" : {
+		"offset" : 0,
+		"size" : 4
+	    }
+	},
+	"output" : {}
+    },
+    "HvEnablePartitionVtl" : {
+	"call_code" : 13,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "TargetPartitionId" : {
+		"offset" : 0,
+		"size" : 8
+	    },
+	    "Flags" : {
+		"offset" : 8,
+		"size" : 4
+	    },
+	    "TargetVTL" : {
+		"offset" : 12,
+		"size" : 1
+	    }
+	},
+	"output" : {}
+    },
+    "HvEnableVpVtl" : {
+	"call_code" : 15,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "TargetPartitionId" : {
+		"offset" : 0,
+		"size" : 8
+	    },
+	    "VpIndex" : {
+		"offset" : 8,
+		"size" : 4
+	    },
+	    "TargetVtl" : {
+		"offset" : 12,
+		"size" : 1
+	    },
+	    "Rip" : {
+		"offset" : 16,
+		"size" : 8
+	    },
+	    "Rsp" : {
+		"offset" : 24,
+		"size" : 8
+	    },
+	    "Rflags" : {
+		"offset" : 32,
+		"size" : 8
+	    },
+	    "Cs[0]" : {
+		"offset" : 40,
+		"size" : 8
+	    },
+	    "Cs[1]" : {
+		"offset" : 48,
+		"size" : 8
+	    },
+	    "Ds[0]" : {
+		"offset" : 56,
+		"size" : 8
+	    },
+	    "Ds[1]" : {
+		"offset" : 64,
+		"size" : 8
+	    },
+	    "Es[0]" : {
+		"offset" : 72,
+		"size" : 8
+	    },
+	    "Es[1]" : {
+		"offset" : 80,
+		"size" : 8
+	    },
+	    "Fs[0]" : {
+		"offset" : 88,
+		"size" : 8
+	    },
+	    "Fs[1]" : {
+		"offset" : 96,
+		"size" : 8
+	    },
+	    "Gs[0]" : {
+		"offset" : 104,
+		"size" : 8
+	    },
+	    "Gs[1]" : {
+		"offset" : 112,
+		"size" : 8
+	    },
+	    "Ss[0]" : {
+		"offset" : 120,
+		"size" : 8
+	    },
+	    "Ss[1]" : {
+		"offset" : 128,
+		"size" : 8
+	    },
+	    "Ts[0]" : {
+		"offset" : 136,
+		"size" : 8
+	    },
+	    "Ts[1]" : {
+		"offset" : 144,
+		"size" : 8
+	    },
+	    "Ltdr[0]" : {
+		"offset" : 152,
+		"size" : 8
+	    },
+	    "Ltdr[1]" : {
+		"offset" : 160,
+		"size" : 8
+	    },
+	    "ltdr[0]" : {
+		"offset" : 168,
+		"size" : 8
+	    },
+	    "ltdr[1]" : {
+		"offset" : 176,
+		"size" : 8
+	    },
+	    "Gtdr[0]" : {
+		"offset" : 184,
+		"size" : 8
+	    },
+	    "Gtdr[1]" : {
+		"offset" : 192,
+		"size" : 8
+	    },
+	    "Efer" : {
+		"offset" : 200,
+		"size" : 8
+	    },
+	    "Cr0" : {
+		"offset" : 208,
+		"size" : 8
+	    },
+	    "Cr3" : {
+		"offset" : 216,
+		"size" : 8
+	    },
+	    "Cr4" : {
+		"offset" : 224,
+		"size" : 8
+	    },
+	    "MsrCrPat" : {
+		"offset" : 232,
+		"size" : 8
+	    }
+	},
+	"output" : {}
+    },
+    "HvVtlCall" : {
+	"call_code" : 17,
+	"fast" : false,
+	"rep" : false,
+	"params" : {},
+	"output" : {}
+    },
+    "HvVtlReturn" : {
+	"call_code" : 18,
+	"fast" : false,
+	"rep" : false,
+	"params" : {},
+	"output" : {}
+    },
+    "HvFlushGuestPhysicalAddressSpace" : {
+	"call_code" : 175,
+	"fast" : false,
+	"rep" : false,
+	"params" : {
+	    "AddressSpace" : {
+		"offset" : 0,
+		"size" : 8
+	    },
+	    "Flags" : {
+		"offset" : 8,
+		"size" : 8
+	    }
+	},
+	"output" : {}
+    },
+	"HvCreatePort" : {
+		"call_code" : 87,
+		"fast" : false,
+		"rep" : false,
+		"params" : {
+			"PortPartition" : {
+				"offset" : 0,
+				"size" : 8
+			},
+			"PortId" : {
+				"offset" : 8,
+				"size" : 4
+			},
+			"Padding" : {
+				"offset" : 12,
+				"size" : 4
+			},
+			"ConnectionPartition" : {
+				"offset" : 16,
+				"size" : 8
+			},
+			"PortInfo" : {
+				"offset" : 24,
+				"size" : 24
+			}
+		},
+		"output" : {}
+	},
+	"HvCreateVp" : {
+		"call_code": 78,
+		"fast": false,
+		"rep": false,
+		"params": {
+			"PartitionId": {
+				"offset": 0,
+				"size": 8
+			},
+			"VpIndex": {
+				"offset": 8,
+				"size": 4
+			},
+			"Padding": {
+				"offset": 12,
+				"size": 4
+			},
+			"ProximityDomainInfo": {
+				"offset": 16,
+				"size": 8
+			},
+			"Flags": {
+				"offset": 24,
+				"size": 8
+			}
+		},
+		"output": {}
+	},
+	"HvDeleteVp" : {
+		"call_code": 79,
+		"fast": false,
+		"rep": false,
+		"params": {
+			"PartitionId": {
+				"offset": 0,
+				"size": 8
+			},
+			"VpIndex": {
+				"offset": 8,
+				"size": 4
+			},
+			"Padding": {
+				"offset": 12,
+				"size": 4
+			}
+		},
+		"output": {}
+	},
+	"HvCreatePartition" : {
+		"call_code": 64,
+		"fast": false,
+		"rep": false,
+		"params": {
+			"Flags": {
+				"offset": 0,
+				"size": 8
+			},
+			"ProximityDomainInfoId": {
+				"offset": 8,
+				"size": 4
+			},
+			"ProximityDomainInfoFlags": {
+				"offset": 12,
+				"size": 4
+			}
+		},
+		"output": {
+			"partitionId": {
+				"offset": 0,
+				"size": 8
+			}
+		}
+	},
+	"HvInitializePartition" : {
+		"call_code": 65,
+		"fast": true,
+		"rep": false,
+		"params": {
+			"partitionId": {
+				"offset": 0,
+				"size": 8
+			}
+		},
+		"output": { }
+	},
+	"HvFinalizePartition" : {
+		"call_code": 66,
+		"fast": true,
+		"rep": false,
+		"params": {
+			"partitionId": {
+				"offset": 0,
+				"size": 8
+			}
+		},
+		"output": { }
+	},
+	"HvDeletePartition" : {
+		"call_code": 67,
+		"fast": true,
+		"rep": false,
+		"params": {
+			"partitionId": {
+				"offset": 0,
+				"size": 8
+			}
+		},
+		"output": { }
+	},
+	"HvCreateEventLogBuffer" : {
+		"call_code": 98,
+		"fast": true,
+		"rep": false,
+		"params": {
+			"eventLogType": {
+				"offset": 0,
+				"size": 4
+			},
+			"bufferIndex": {
+				"offset": 4,
+				"size": 4
+			},
+			"proximityInfoId": {
+				"offset": 8,
+				"size": 4
+			},
+			"proximityInfoFlags": {
+				"offset": 12,
+				"size": 4
+			}
+		},
+		"output": { }
+	},
+	"HvDeleteEventLogBuffer" : {
+		"call_code": 99,
+		"fast": true,
+		"rep": false,
+		"params": {
+			"eventLogType": {
+				"offset": 0,
+				"size": 4
+			},
+			"bufferIndex": {
+				"offset": 4,
+				"size": 4
+			}
+		},
+		"output": { }
+	},
+	"HvUnmapEventLogBuffer" : {
+		"call_code": 101,
+		"fast": true,
+		"rep": false,
+		"params": {
+			"eventLogType": {
+				"offset": 0,
+				"size": 4
+			},
+			"bufferIndex": {
+				"offset": 4,
+				"size": 4
+			}
+		},
+		"output": { }
+	},
+	"HvMapEventLogBuffer" : {
+		"call_code": 100,
+		"fast": false,
+		"rep": false,
+		"params": {
+			"eventLogType": {
+				"offset": 0,
+				"size": 4
+			},
+			"bufferIndex": {
+				"offset": 4,
+				"size": 4
+			}
+		},
+		"output": {
+			"gpaPages": {
+				"offset": 2,
+				"size": 8
+			}
+		}
+	},
+	"HvInitializeEventLogBufferGroup" : {
+		"call_code": 96,
+		"fast": false,
+		"rep": false,
+		"params": {
+			"eventLogType": {
+				"offset": 0,
+				"size": 4
+			},
+			"maximumBufferCount": {
+				"offset": 4,
+				"size": 4
+			},
+			"bufferPages": {
+				"offset": 8,
+				"size": 4
+			},
+			"treshold": {
+				"offset": 12,
+				"size": 4
+			},
+			"timeBasis": {
+				"offset": 16,
+				"size": 4
+			},
+			"systemTime": {
+				"offset": 20,
+				"size": 8
+			},
+			"padding": {
+				"offset": 28,
+				"size": 4
+			}
+		},
+		"output": { }
+	},
+	"HvFinalizeEventLogBufferGroup" : {
+		"call_code": 97,
+		"fast": true,
+		"rep": false,
+		"params": {
+			"eventLogType": {
+				"offset": 0,
+				"size": 4
+			},
+			"padding": {
+				"offset": 28,
+				"size": 4
+			}
+		},
+		"output": { }
+	},
+	"HvGetMemoryBalance" : {
+		"call_code": 74,
+		"fast": false,
+		"rep": false,
+		"params": {
+			"partitionId": {
+				"offset": 0,
+				"size": 8
+			},
+			"proximityDomainInfo": {
+				"offset": 8,
+				"size": 8
+			}
+		},
+		"output": {
+			"partitionId": {
+				"offset": 0,
+				"size": 8
+			},
+			"proximityDomainInfo": {
+				"offset": 8,
+				"size": 8
+			}
+		}
+	},
+	"HvPostDebugData" : {
+		"call_code": 105,
+		"fast": false,
+		"rep": false,
+		"params": {
+			"Count": {
+				"offset": 0,
+				"size": 4
+			},
+			"Options": {
+				"offset": 4,
+				"size": 4
+			},
+			"Data": {
+				"offset": 8,
+				"size": 8
+			}
+		},
+		"output": {}
+	}
+}

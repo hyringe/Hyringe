@@ -1,0 +1,30 @@
+var1, var2, var3;
+importantVar, another_var;
+
+proc doSomething() {}
+
+var4, var5;
+var6;
+
+proc main  ()
+{
+    x = "this is a test";
+    lsl = 300;
+    delay((5+3*100)%lsl);
+    z = -(3*5)+7%2/x=4+3;
+    y = x / 5;
+    delay(0b1000 + 0xfa);
+    var2 = ["y1234567" -> 5, 5];
+    someProc("test" -> 100 + 2);
+    map = [ "test" -> 1, "hi" -> 45, "there" -> 764 ];
+    delay(75);
+    hcall(["aeuihd" -> 5, "ueiasn" -> [4, 5, 6, 7], "aoe" -> "hi"]);
+    for (i : range(0,100))
+        hcall(["u" -> exp(802)]);
+}
+
+proc someProc(param1)
+{
+    delay(var2[0].val);
+    delay(5);
+}

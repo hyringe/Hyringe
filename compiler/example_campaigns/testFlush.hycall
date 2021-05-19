@@ -1,0 +1,11 @@
+HV_FLUSH_ALL_PROCESSORS = 0b1;
+HV_FLUSH_ALL_VIRTUAL_ADDRESS_SPACES = 0b10;
+
+
+proc main() {
+    for (i : range(0, 10000)) {
+        hcall(["name" -> "HvFlushVirtualAddressSpace", "AddressSpace" -> 0, "Flags" -> HV_FLUSH_ALL_PROCESSORS + HV_FLUSH_ALL_VIRTUAL_ADDRESS_SPACES, "ProcessorMask" -> 0]);
+        delay(1000);
+    }
+}
+

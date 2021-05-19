@@ -1,0 +1,9 @@
+PID = 3;
+VPI = 4;
+
+proc main() {
+    for (i : range(0, 10000)) {
+        hcall(["name" -> "HvCreateVp", "PartitionId" -> PID, "VpIndex" -> VPI]);
+        hcall(["name" -> "HvDeleteVp", "PartitionId" -> PID, "VpIndex" -> VPI]);
+    }
+}
